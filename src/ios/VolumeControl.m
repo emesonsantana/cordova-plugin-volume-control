@@ -21,7 +21,7 @@
 - (void)toggleMute:(CDVInvokedUrlCommand*)command
 {
     CDVPluginResult* pluginResult = nil;
-    DLog(@"toggleMute");
+    //DLog(@"toggleMute");
 
     Class avSystemControllerClass = NSClassFromString(@"AVSystemController");
     id avSystemControllerInstance = [avSystemControllerClass performSelector:@selector(sharedAVSystemController)];
@@ -42,7 +42,7 @@
 - (void)isMuted:(CDVInvokedUrlCommand*)command
 {
     CDVPluginResult* pluginResult = nil;
-    DLog(@"isMuted");
+    //DLog(@"isMuted");
 
     Class avSystemControllerClass = NSClassFromString(@"AVSystemController");
     id avSystemControllerInstance = [avSystemControllerClass performSelector:@selector(sharedAVSystemController)];
@@ -64,7 +64,7 @@
 {
     CDVPluginResult* pluginResult = nil;
     float volume = [[command argumentAtIndex:0] floatValue];
-    DLog(@"setVolume: [%f]", volume);
+    //DLog(@"setVolume: [%f]", volume);
 
     Class avSystemControllerClass = NSClassFromString(@"AVSystemController");
     id avSystemControllerInstance = [avSystemControllerClass performSelector:@selector(sharedAVSystemController)];
@@ -86,7 +86,7 @@
 - (void)getVolume:(CDVInvokedUrlCommand*)command
 {
     CDVPluginResult* pluginResult = nil;
-    DLog(@"getVolume");
+    //DLog(@"getVolume");
 
     AVAudioSession *audioSession = [AVAudioSession sharedInstance];
 
@@ -97,7 +97,7 @@
 - (void)getCategory:(CDVInvokedUrlCommand*)command
 {
     CDVPluginResult* pluginResult = nil;
-    DLog(@"getCategory");
+    //DLog(@"getCategory");
 
     AVAudioSession *audioSession = [AVAudioSession sharedInstance];
 
@@ -108,7 +108,7 @@
 - (void)hideVolume:(CDVInvokedUrlCommand*)command
 {
     CDVPluginResult* pluginResult = nil;
-    DLog(@"hideVolume");
+    //DLog(@"hideVolume");
 
     MPVolumeView *volumeView = [[MPVolumeView alloc] initWithFrame: CGRectZero];
     volumeView.alpha = 0.01;
